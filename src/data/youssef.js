@@ -10,8 +10,8 @@ export const youssef = {
     location: "Giza, Egypt",
     stack: ["React.js", "Next.js", "Tailwind", "Bootstrap"],
     skills: {
-        frontend: [{ name: "HTML", exp: 95 }, { name: "CSS", exp: 75 }, { name: "JavaScript", exp: 85 }, { name: "Bootstrap", exp: 90 }, { name: "React", exp: 90 }, { name: "Next.js", exp: 95 }],
-        tools: [{ name: "Git", exp: 90 }, { name: "GitHub", exp: 90 }, { name: "Postman", exp: 90 }],
+        frontend: ["HTML", "CSS", "JavaScript", "Bootstrap", "Tailwind", "React.js", "Next.js"],
+        tools: ["Git", "GitHub", "Postman"],
     },
     languages: ["Arabic (Native)", "English (Professional)"],
     links: [

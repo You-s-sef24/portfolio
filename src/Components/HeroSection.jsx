@@ -15,14 +15,14 @@ export default function HeroSection() {
   return (
     <div
       id="home"
-      className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 bg-gray-900 h-[100dvh]"
+      className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 bg-gray-900 min-h-[100dvh] items-center mx-auto"
     >
-      <div>
+      <div className="flex flex-col justify-center mt-12 md:mt-0">
         <div className="mb-5 flex items-center gap-2 font-mono text-[12px] tracking-[0.08em] text-sky-400">
           <span className="inline-block h-px w-6 bg-sky-400"></span>
           hello, world
         </div>
-        <h3 className="text-7xl font-bold text-white mb-5">{youssef.name}</h3>
+        <h3 className="text-5xl md:text-7xl font-bold text-white mb-5">{youssef.name}</h3>
         <h4 className="text-xl text-gray-400 font-bold mb-4">
           {youssef.job} -{" "}
           <span className="text-blue-400">{youssef.framework}</span>

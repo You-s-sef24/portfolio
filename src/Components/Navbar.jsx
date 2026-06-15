@@ -5,28 +5,29 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 flex justify-between items-center bg-black font-bold text-white p-4 z-50">
-      <span>
+    <nav className="fixed top-0 left-0 right-0 flex justify-between items-center bg-black border-b border-slate-800 font-bold text-white p-4 z-50 h-[64px]">
+      <span className="cursor-pointer select-none">
         <span className="text-blue-400">{`<`}</span>youssef
         <span className="text-blue-400">.dev </span>
         <span className="text-blue-400">{`/>`}</span>
       </span>
+
       {/* Desktop Links */}
-      <div className="hidden md:flex text-lg gap-4">
-        <a href="#about" className="hover:text-blue-600 transition-all">
+      <div className="hidden md:flex items-center text-lg gap-4">
+        <a href="#about" className="hover:text-blue-400 transition-all">
           About
         </a>
-        <a href="#projects" className="hover:text-blue-600 transition-all">
+        <a href="#projects" className="hover:text-blue-400 transition-all">
           Projects
         </a>
-        <a href="#stack" className="hover:text-blue-600 transition-all">
+        <a href="#stack" className="hover:text-blue-400 transition-all">
           Stack
         </a>
-        <a href="#contact" className="hover:text-blue-600 transition-all">
+        <a href="#contact" className="hover:text-blue-400 transition-all">
           Contact
         </a>
         {youssef.openToWork ? (
-          <div className="flex items-center gap-2 px-6">
+          <div className="flex items-center gap-2 pl-4">
             <span className="inline-block h-2 w-2 rounded-full bg-green-400 shadow-lg shadow-green-400 animate-pulse"></span>
             <span className="font-mono text-xs text-green-400">
               Open to work
@@ -35,12 +36,11 @@ export default function Navbar() {
         ) : null}
       </div>
 
-      {/* Mobile Hamburger & Language */}
-      <div className="flex lg:hidden items-center gap-2">
-        {/* Hamburger */}
+      {/* Mobile Hamburger Menu Toggle */}
+      <div className="flex md:hidden items-center gap-2">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden px-4 py-2 text-white rounded focus:outline-none hover:text-blue-600 transition-all"
+          className="px-2 py-2 text-white rounded focus:outline-none hover:text-blue-400 transition-all"
         >
           {isOpen ? (
             <svg
@@ -68,48 +68,39 @@ export default function Navbar() {
 
       {/* Full-width Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden fixed top-[64px] left-0 w-screen bg-black/50  border-t border-gray-200 dark:border-neutral-700 shadow-lg z-50">
+        <div className="md:hidden fixed top-[64px] left-0 w-full h-[calc(100vh-64px)] bg-black/95 backdrop-blur-lg border-t border-slate-800 shadow-lg z-50 flex flex-col pt-4">
           <a
             href="#about"
-            className="block px-6 py-4 text-white dark:text-white hover:text-blue-600 transition-all"
-            onClick={() => {
-              setIsOpen(false);
-            }}
+            className="block px-6 py-4 text-white hover:text-blue-400 transition-all text-xl"
+            onClick={() => setIsOpen(false)}
           >
             About
           </a>
           <a
             href="#projects"
-            className="block px-6 py-4 text-white dark:text-white hover:text-blue-600 transition-all"
-            onClick={() => {
-              setIsOpen(false);
-            }}
+            className="block px-6 py-4 text-white hover:text-blue-400 transition-all text-xl"
+            onClick={() => setIsOpen(false)}
           >
             Projects
           </a>
           <a
             href="#stack"
-            className="block px-6 py-4 text-white dark:text-white hover:text-blue-600 transition-all"
-            onClick={() => {
-              setIsOpen(false);
-            }}
+            className="block px-6 py-4 text-white hover:text-blue-400 transition-all text-xl"
+            onClick={() => setIsOpen(false)}
           >
             Stack
           </a>
           <a
             href="#contact"
-            className="block px-6 py-4 text-white dark:text-white hover:text-blue-600 transition-all"
-            onClick={() => {
-              setIsOpen(false);
-            }}
+            className="block px-6 py-4 text-white hover:text-blue-400 transition-all text-xl"
+            onClick={() => setIsOpen(false)}
           >
             Contact
           </a>
 
           {youssef.openToWork && (
-            <div className="flex items-center gap-2 px-6 py-4">
+            <div className="flex items-center gap-2 px-6 py-4 mt-auto mb-8 border-t border-slate-800/50">
               <span className="inline-block h-2 w-2 rounded-full bg-green-400 shadow-lg shadow-green-400 animate-pulse"></span>
-
               <span className="font-mono text-xs text-green-400">
                 Open to work
               </span>
