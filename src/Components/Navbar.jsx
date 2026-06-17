@@ -7,9 +7,8 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 flex justify-between items-center bg-black border-b border-slate-800 font-bold text-white p-4 z-50 h-[64px]">
       <span className="cursor-pointer select-none">
-        <span className="text-blue-400">{`<`}</span>youssef
-        <span className="text-blue-400">.dev </span>
-        <span className="text-blue-400">{`/>`}</span>
+        <span className="text-blue-400">{`<`}</span>Youssef
+        <span className="text-blue-400">{` />`}</span>
       </span>
 
       {/* Desktop Links */}

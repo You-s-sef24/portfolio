@@ -45,6 +45,13 @@ export default function HeroSection() {
           >
             Get in touch
           </a>
+          <a
+            href="../assets/cv.pdf"
+            download
+            className="ml-4 bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded transition-all"
+          >
+            Download CV
+          </a>
         </div>
 
         <div className="flex items-center gap-4 mt-8">{links}</div>

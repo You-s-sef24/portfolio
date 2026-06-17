@@ -31,21 +31,17 @@ export default function About() {
   return (
     <div
       id="about"
-      className="min-h-screen bg-gray-900 text-white p-6 py-20 mx-auto"
+      className="min-h-screen bg-gray-900 text-white p-6 pt-20 mx-auto"
     >
       <div className="mb-5 flex items-center gap-2 font-mono text-[12px] tracking-[0.08em] text-sky-400">
         <span className="inline-block h-px w-6 bg-sky-400"></span>
         {`<about />`}
       </div>
-      <div className="w-full mb-12 text-center">
-        <div className="mb-3 flex items-center justify-center gap-2 font-mono text-[12px] tracking-[0.08em] text-sky-400"></div>
-        <h2 className="text-4xl font-bold mb-4 tracking-tight">About Me</h2>
-      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full items-start">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
         <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-6 flex flex-col gap-6 md:col-span-1 h-full">
           <div>
-            <h3 className="text-sm font-mono uppercase tracking-wider text-sky-400 mb-4 border-b border-slate-800 pb-2">
+            <h3 className="text-sm text-center font-mono uppercase tracking-wider text-sky-400 mb-4 border-b border-slate-800 pb-2">
               Personal Background
             </h3>
             <div className="space-y-3 text-sm">
@@ -65,7 +61,7 @@ export default function About() {
           </div>
 
           <div>
-            <h3 className="text-sm font-mono uppercase tracking-wider text-sky-400 mb-4 border-b border-slate-800 pb-2">
+            <h3 className="text-sm text-center font-mono uppercase tracking-wider text-sky-400 mb-4 border-b border-slate-800 pb-2">
               Education
             </h3>
             <div className="space-y-3 text-sm">
@@ -92,7 +88,7 @@ export default function About() {
           </div>
 
           <div>
-            <h3 className="text-sm font-mono uppercase tracking-wider text-sky-400 mb-4 border-b border-slate-800 pb-2">
+            <h3 className="text-sm text-center font-mono uppercase tracking-wider text-sky-400 mb-4 border-b border-slate-800 pb-2">
               Languages
             </h3>
             <div className="grid grid-cols-2 gap-2">{languages}</div>
