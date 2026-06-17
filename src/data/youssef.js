@@ -38,54 +38,48 @@ export const youssef = {
     projects: [
         {
             id: 1,
-            name: "Expense Tracker",
-            thumbnail: './images/projects/expense-tracker.png',
-            description: "Track and manage daily expenses with an intuitive interface and local data storage.",
-            tech: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-            githubLink: "https://github.com/You-s-sef24/Besar-Expense-Tracker"
+            title: "OraLink (Graduation Project)",
+            img: '/public/projects/oralink.png',
+            description: "Academic detal Management System for students and teachers, built with Next.js and Bootstrap.",
+            techs: ["Next.js", "Bootstrap"],
+            demo: "https://oralink.vercel.app/",
+            github: "https://github.com/You-s-sef24/oralink"
         },
         {
             id: 2,
-            name: "EzBuy",
-            thumbnail: './images/projects/EzBuy.png',
+            title: "EzBuy",
+            img: '/public/projects/EzBuy.png',
             description: "A clean and responsive e-commerce interface for browsing and managing products.",
-            tech: ["HTML", "CSS", "React", "Bootstrap"],
-            liveLink: "https://project-17-e-commerce.vercel.app/",
-            githubLink: "https://github.com/You-s-sef24/Project-17---E-Commerce"
+            techs: ["React", "Bootstrap"],
+            demo: "https://project-17-e-commerce.vercel.app/",
+            github: "https://github.com/You-s-sef24/Project-17---E-Commerce"
         },
         {
             id: 3,
-            name: "MathStorm",
-            thumbnail: './images/projects/mathstorm.png',
-            description: "An interactive math quiz game with timed challenges and score tracking.",
-            tech: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-            githubLink: "https://github.com/You-s-sef24/Project-13--MathStorm"
+            title: "Stance Festival",
+            img: '/public/projects/stance-festival.png',
+            description: "Landing page for stance frstival event for cars. Sponsered by ashrafc & Minestry of youth and sports",
+            techs: ["Next.js", "Tailwind"],
+            github: "https://github.com/You-s-sef24/stance-festival",
+            demo: "https://stance-festival.vercel.app/"
         },
         {
             id: 4,
-            name: "Cloudy",
-            thumbnail: './images/projects/Cloudy.png',
-            description: "A weather app providing real-time forecasts with a sleek, user-friendly design.",
-            tech: ["HTML", "CSS", "React", "Bootstrap"],
-            liveLink: "https://project-16-cloudy.vercel.app/",
-            githubLink: "https://github.com/You-s-sef24/Project-16---Cloudy"
+            title: "Pizzario",
+            img: '/public/projects/Pizzario.png',
+            description: "A pizza ordering app with a modern UI and seamless checkout experience.",
+            techs: ["Next.js", "Bootstrap"],
+            demo: "https://pizzario-xi.vercel.app/",
+            github: "https://github.com/You-s-sef24/pizzario"
         },
         {
-            id: 5,
-            name: "Todo List",
-            thumbnail: './images/projects/todo-list.png',
-            description: "A simple yet efficient task manager to organize daily activities.",
-            tech: ["HTML", "CSS", "React", "Bootstrap"],
-            liveLink: "https://todo-list-using-react-smoky.vercel.app/",
-            githubLink: "https://github.com/You-s-sef24/TodoList-Using-React"
-        }, {
             id: 6,
-            name: "Cookpedia",
-            thumbnail: './images/projects/Cookpedia.png',
+            title: "Cookpedia",
+            img: '/public/projects/Cookpedia.png',
             description: "A Next.js app using TheMealDB API with features like browsing meals by category or region, viewing featured recipes.",
-            tech: ["HTML", "CSS", "React", "Bootstrap", "Next.js"],
-            liveLink: "https://cookpedia-eta.vercel.app/",
-            githubLink: "https://github.com/You-s-sef24/cookpedia"
+            techs: ["Next.js", "Bootstrap"],
+            demo: "https://cookpedia-eta.vercel.app/",
+            github: "https://github.com/You-s-sef24/cookpedia"
         }
     ],
     contactForm: {
