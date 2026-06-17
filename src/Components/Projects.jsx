@@ -1,5 +1,4 @@
 import { youssef } from "../data/youssef";
-// Deleted the external ProjectCard import line from here
 
 export default function Projects() {
   const projects = youssef.projects;
