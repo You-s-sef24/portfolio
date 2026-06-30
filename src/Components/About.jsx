@@ -28,6 +28,20 @@ export default function About() {
     </span>
   ));
 
+  const experience = youssef.experience.map((exp, index) => (
+    <div key={index} className="relative pl-4 border-l-2 border-sky-400/30">
+      <span className="absolute -left-[5px] top-1.5 h-2 w-2 rounded-full bg-sky-400"></span>
+      <p className="text-white font-medium text-sm">
+        {exp.role}{" "}
+        <span className="text-sky-400 font-normal">@ {exp.company}</span>
+      </p>
+      <p className="text-gray-500 font-mono text-xs mt-0.5">
+        {exp.startDate} - {exp.endDate}
+      </p>
+      <p className="text-gray-400 text-sm mt-1.5">{exp.description}</p>
+    </div>
+  ));
+
   return (
     <div
       id="about"
@@ -58,6 +72,13 @@ export default function About() {
                 </span>
               </p>
             </div>
+          </div>
+
+          <div>
+            <h3 className="text-sm text-center font-mono uppercase tracking-wider text-sky-400 mb-4 border-b border-slate-800 pb-2">
+              Experience
+            </h3>
+            <div className="space-y-4">{experience}</div>
           </div>
 
           <div>

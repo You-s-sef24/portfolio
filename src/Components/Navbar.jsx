@@ -11,7 +11,6 @@ export default function Navbar() {
         <span className="text-blue-400">{` />`}</span>
       </span>
 
-      {/* Desktop Links */}
       <div className="hidden md:flex items-center text-lg gap-4">
         <a href="#about" className="hover:text-blue-400 transition-all">
           About
@@ -35,7 +34,6 @@ export default function Navbar() {
         ) : null}
       </div>
 
-      {/* Mobile Hamburger Menu Toggle */}
       <div className="flex md:hidden items-center gap-2">
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -65,7 +63,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Full-width Mobile Menu */}
       {isOpen && (
         <div className="md:hidden fixed top-[64px] left-0 w-full h-[calc(100vh-64px)] bg-black/95 backdrop-blur-lg border-t border-slate-800 shadow-lg z-50 flex flex-col pt-4">
           <a

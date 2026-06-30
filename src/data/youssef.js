@@ -28,6 +28,15 @@ export const youssef = {
             link: "https://www.instagram.com/youssefmahmoud.2004/",
         }
     ],
+    experience: [
+        {
+            company: "Teqneia",
+            role: "Frontend Developer Intern",
+            startDate: "June 2026",
+            endDate: "Present",
+            description: "Working on building and maintaining responsive web interfaces using React.js and Next.js, collaborating with the team to implement clean, reusable components and improve overall UI quality."
+        }
+    ],
     education: {
         university: "October 6 University",
         faculty: "Faculty of Computer Science",
