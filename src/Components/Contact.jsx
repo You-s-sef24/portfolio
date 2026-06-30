@@ -12,7 +12,6 @@ export default function Contact() {
   const [status, setStatus] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Clean country code format for the standard WhatsApp API
   const whatsappNumber = "201115658096";
   const defaultText = encodeURIComponent(
     "Hello Youssef! I saw your portfolio and would love to chat about a project.",
@@ -58,15 +57,12 @@ export default function Contact() {
       id="contact"
       className="min-h-screen bg-gray-900 text-white p-6 mx-auto flex flex-col justify-center max-w-4xl"
     >
-      {/* Code-style Tag Header */}
       <div className="mb-5 flex items-center gap-2 font-mono text-[12px] tracking-[0.08em] text-sky-400">
         <span className="inline-block h-px w-6 bg-sky-400"></span>
         {`<contact />`}
       </div>
 
-      {/* Terminal Window Box */}
       <div className="rounded shadow-sm bg-slate-800/40 border border-slate-800 overflow-hidden w-full mx-auto">
-        {/* Mac Terminal Style Window Header Top-Bar */}
         <div className="flex items-center gap-2 border-b border-slate-800 bg-[#0d1117] px-4 py-[10px]">
           <span className="h-3 w-3 rounded-full bg-[#ff5f56]" />
           <span className="h-3 w-3 rounded-full bg-[#ffbd2e]" />
@@ -78,14 +74,12 @@ export default function Contact() {
           <span className="flex-1" />
         </div>
 
-        {/* Content Form Shell */}
         <form onSubmit={handleSubmit} className="p-6 flex flex-col gap-4">
           <p className="text-gray-400 text-sm mb-2">
             // Leave a message through the standard gateway or connect
             immediately via secure chat.
           </p>
 
-          {/* Name input */}
           <div className="flex flex-col gap-1">
             <label htmlFor="name" className="font-mono text-xs text-sky-400">
               const travelerName =
@@ -101,7 +95,6 @@ export default function Contact() {
             />
           </div>
 
-          {/* Email input */}
           <div className="flex flex-col gap-1">
             <label htmlFor="email" className="font-mono text-xs text-sky-400">
               const returnEmail =
@@ -119,7 +112,6 @@ export default function Contact() {
             />
           </div>
 
-          {/* Phone input */}
           <div className="flex flex-col gap-1">
             <label htmlFor="phone" className="font-mono text-xs text-sky-400">
               const contactPhone ={" "}
@@ -137,7 +129,6 @@ export default function Contact() {
             />
           </div>
 
-          {/* Message input */}
           <div className="flex flex-col gap-1">
             <label htmlFor="message" className="font-mono text-xs text-sky-400">
               const messagePayload =
@@ -153,14 +144,12 @@ export default function Contact() {
             />
           </div>
 
-          {/* Network Response Alert Notification */}
           {status && (
             <div className="w-full p-3 font-mono text-xs text-center bg-[#0d1117] border border-slate-800 rounded text-gray-300">
               {status}
             </div>
           )}
 
-          {/* Bottom Divider */}
           <hr className="border-slate-800 mt-2" />
 
           <div className="flex justify-around bg-[#0d1117]/50 -mx-6 -mb-6 p-3">

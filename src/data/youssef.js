@@ -11,7 +11,7 @@ export const youssef = {
     stack: ["React.js", "Next.js", "Tailwind", "Bootstrap"],
     skills: {
         frontend: ["HTML", "CSS", "JavaScript", "Bootstrap", "Tailwind", "React.js", "Next.js"],
-        tools: ["Git", "GitHub", "Postman"],
+        tools: ["Git", "GitHub", "Postman", "Shadcn"],
     },
     languages: ["Arabic (Native)", "English (Professional)"],
     links: [
@@ -47,6 +47,15 @@ export const youssef = {
         },
         {
             id: 2,
+            title: "CimaZone",
+            img: '/public/projects/cima-zone.png',
+            description: "An IMDb-style app built with Next.js and the TMDB API, featuring live movie/TV data, dynamic search, and detailed cast, trailer, and streaming info.",
+            techs: ["Next.js", "Tailwind"],
+            demo: "https://cima-zone.vercel.app/",
+            github: "https://github.com/You-s-sef24/cima-zone"
+        },
+        {
+            id: 3,
             title: "EzBuy",
             img: '/public/projects/EzBuy.png',
             description: "A clean and responsive e-commerce interface for browsing and managing products.",
@@ -55,7 +64,7 @@ export const youssef = {
             github: "https://github.com/You-s-sef24/Project-17---E-Commerce"
         },
         {
-            id: 3,
+            id: 4,
             title: "Stance Festival",
             img: '/public/projects/stance-festival.png',
             description: "Landing page for stance frstival event for cars. Sponsered by ashrafc & Minestry of youth and sports",
@@ -64,7 +73,7 @@ export const youssef = {
             demo: "https://stance-festival.vercel.app/"
         },
         {
-            id: 4,
+            id: 5,
             title: "Pizzario",
             img: '/public/projects/Pizzario.png',
             description: "A pizza ordering app with a modern UI and seamless checkout experience.",
