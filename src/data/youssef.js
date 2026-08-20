@@ -31,10 +31,11 @@ export const youssef = {
     experience: [
         {
             company: "Teqneia",
+            link: "https://teqneia.com/",
             role: "Frontend Developer Intern",
             startDate: "June 2026",
-            endDate: "Present",
-            description: "Working on building and maintaining responsive web interfaces using React.js and Next.js, collaborating with the team to implement clean, reusable components and improve overall UI quality."
+            endDate: "July 2026",
+            description: "Completed a frontend internship focused on building responsive web interfaces with React.js and Next.js, working on practice projects to strengthen component architecture, reusable UI patterns, and modern frontend workflows."
         }
     ],
     education: {
@@ -48,8 +49,10 @@ export const youssef = {
         {
             id: 1,
             title: "OraLink (Graduation Project)",
-            img: '/public/projects/oralink.png',
-            description: "Academic detal Management System for students and teachers, built with Next.js and Bootstrap.",
+            img: 'https://res.cloudinary.com/dz0ylot2a/image/upload/v1787213207/oralink_u8akhs.png',
+            description: `Built a role-based dental clinic management platform supporting five distinct roles — Admin,
+Student, Supervisor, Doctor, and Head of Department — each with tailored permissions and
+workflows`,
             techs: ["Next.js", "Bootstrap"],
             demo: "https://oralink.vercel.app/",
             github: "https://github.com/You-s-sef24/oralink"
@@ -57,43 +60,34 @@ export const youssef = {
         {
             id: 2,
             title: "CimaZone",
-            img: '/public/projects/cima-zone.png',
+            img: 'https://res.cloudinary.com/dz0ylot2a/image/upload/v1787213204/cima-zone_elcguy.png',
             description: "An IMDb-style app built with Next.js and the TMDB API, featuring live movie/TV data, dynamic search, and detailed cast, trailer, and streaming info.",
-            techs: ["Next.js", "Tailwind"],
+            techs: ["Next.js", "Tailwind", "Zustand", "Tanstack", "Shadcn"],
             demo: "https://cima-zone.vercel.app/",
             github: "https://github.com/You-s-sef24/cima-zone"
         },
         {
             id: 3,
-            title: "EzBuy",
-            img: '/public/projects/EzBuy.png',
-            description: "A clean and responsive e-commerce interface for browsing and managing products.",
-            techs: ["React", "Bootstrap"],
-            demo: "https://project-17-e-commerce.vercel.app/",
-            github: "https://github.com/You-s-sef24/Project-17---E-Commerce"
+            title: "Runic",
+            img: 'https://res.cloudinary.com/dz0ylot2a/image/upload/v1787213412/Screenshot_2026-08-20_110937_a1esis.png',
+            description: "Built an e-commerce platform for selling portraits and frames using Next.js, with a separate Reactbased admin panel for product and order management",
+            techs: ["Next.js", "Tailwind", "i18n", "Zustand", "Tanstack", "Shadcn"],
+            demo: "https://runic-kappa.vercel.app/",
+            github: "https://github.com/You-s-sef24/runic"
         },
         {
             id: 4,
             title: "Stance Festival",
-            img: '/public/projects/stance-festival.png',
+            img: 'https://res.cloudinary.com/dz0ylot2a/image/upload/v1787213217/stance-festival_wrm0wi.png',
             description: "Landing page for stance frstival event for cars. Sponsered by ashrafc & Minestry of youth and sports",
             techs: ["Next.js", "Tailwind"],
             github: "https://github.com/You-s-sef24/stance-festival",
             demo: "https://stance-festival.vercel.app/"
         },
         {
-            id: 5,
-            title: "Pizzario",
-            img: '/public/projects/Pizzario.png',
-            description: "A pizza ordering app with a modern UI and seamless checkout experience.",
-            techs: ["Next.js", "Bootstrap"],
-            demo: "https://pizzario-xi.vercel.app/",
-            github: "https://github.com/You-s-sef24/pizzario"
-        },
-        {
             id: 6,
             title: "Cookpedia",
-            img: '/public/projects/Cookpedia.png',
+            img: 'https://res.cloudinary.com/dz0ylot2a/image/upload/v1787213280/Cookpedia_khqasm.png',
             description: "A Next.js app using TheMealDB API with features like browsing meals by category or region, viewing featured recipes.",
             techs: ["Next.js", "Bootstrap"],
             demo: "https://cookpedia-eta.vercel.app/",

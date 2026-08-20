@@ -33,7 +33,9 @@ export default function About() {
       <span className="absolute -left-[5px] top-1.5 h-2 w-2 rounded-full bg-sky-400"></span>
       <p className="text-white font-medium text-sm">
         {exp.role}{" "}
-        <span className="text-sky-400 font-normal">@ {exp.company}</span>
+        <a href={exp.link} target="_blank" className="text-sky-400 font-normal">
+          @ {exp.company}
+        </a>
       </p>
       <p className="text-gray-500 font-mono text-xs mt-0.5">
         {exp.startDate} - {exp.endDate}

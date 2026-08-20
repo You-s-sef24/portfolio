@@ -41,15 +41,16 @@ export default function HeroSection() {
           </button>
           <a
             href="#contact"
-            className="ml-4 bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded transition-all"
+            className="ml-4 bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded transition-all text-center"
           >
             Get in touch
           </a>
           <a
             href="../assets/cv.pdf"
             download
-            className="ml-4 bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded transition-all"
+            className="ml-4 bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded transition-all text-center"
           >
+            
             Download CV
           </a>
         </div>
