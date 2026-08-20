@@ -29,6 +29,8 @@ export default function Contact() {
     formData.append("phone", contact.phone);
     formData.append("message", contact.msg);
     formData.append("_captcha", "false");
+    formData.append("_subject", "New Portfolio Contact Message");
+    formData.append("_honey", "");
 
     try {
       const res = await fetch(
@@ -80,6 +82,14 @@ export default function Contact() {
               immediately via secure chat.
             </p>
 
+            <input
+              type="text"
+              name="_honey"
+              className="hidden"
+              tabIndex="-1"
+              autoComplete="off"
+            />
+
             <div className="flex flex-col gap-1">
               <label htmlFor="name" className="font-mono text-xs text-sky-400">
                 const travelerName =
@@ -89,7 +99,7 @@ export default function Contact() {
                 type="text"
                 id="name"
                 placeholder="Your Name"
-                className="w-full px-4 py-2.5 text-sm text-white bg-[#0d1117]/60 border border-slate-800 rounded outline-none focus:border-sky-500/50 placeholder-gray-600 transition-colors"
+                className="w-full px-4 py-2.5 text-sm text-white bg-[#0d1117]/60 border border-slate-800 rounded outline-none focus:border-sky-500/50 focus:ring-2 focus:ring-sky-500/30 placeholder-gray-600 transition-colors"
                 value={contact.name}
                 onChange={(e) =>
                   setContact({ ...contact, name: e.target.value })
@@ -106,7 +116,7 @@ export default function Contact() {
                 type="email"
                 id="email"
                 placeholder="name@example.com"
-                className="w-full px-4 py-2.5 text-sm text-white bg-[#0d1117]/60 border border-slate-800 rounded outline-none focus:border-sky-500/50 placeholder-gray-600 transition-colors"
+                className="w-full px-4 py-2.5 text-sm text-white bg-[#0d1117]/60 border border-slate-800 rounded outline-none focus:border-sky-500/50 focus:ring-2 focus:ring-sky-500/30 placeholder-gray-600 transition-colors"
                 value={contact.email}
                 onChange={(e) =>
                   setContact({ ...contact, email: e.target.value })
@@ -123,7 +133,9 @@ export default function Contact() {
                 type="tel"
                 id="phone"
                 placeholder="Your Phone Number"
-                className="w-full px-4 py-2.5 text-sm text-white bg-[#0d1117]/60 border border-slate-800 rounded outline-none focus:border-sky-500/50 placeholder-gray-600 transition-colors"
+                pattern="^01[0125][0-9]{8}$"
+                title="Enter a valid Egyptian phone number (e.g. 01012345678)"
+                className="w-full px-4 py-2.5 text-sm text-white bg-[#0d1117]/60 border border-slate-800 rounded outline-none focus:border-sky-500/50 focus:ring-2 focus:ring-sky-500/30 placeholder-gray-600 transition-colors"
                 value={contact.phone}
                 onChange={(e) =>
                   setContact({ ...contact, phone: e.target.value })
@@ -143,7 +155,7 @@ export default function Contact() {
                 id="message"
                 rows="4"
                 placeholder="Write your message here..."
-                className="w-full px-4 py-2.5 text-sm text-white bg-[#0d1117]/60 border border-slate-800 rounded outline-none focus:border-sky-500/50 placeholder-gray-600 transition-colors resize-none"
+                className="w-full px-4 py-2.5 text-sm text-white bg-[#0d1117]/60 border border-slate-800 rounded outline-none focus:border-sky-500/50 focus:ring-2 focus:ring-sky-500/30 placeholder-gray-600 transition-colors resize-none"
                 value={contact.msg}
                 onChange={(e) =>
                   setContact({ ...contact, msg: e.target.value })
@@ -152,7 +164,11 @@ export default function Contact() {
             </div>
 
             {status && (
-              <div className="w-full p-3 font-mono text-xs text-center bg-[#0d1117] border border-slate-800 rounded text-gray-300">
+              <div
+                role="status"
+                aria-live="polite"
+                className="w-full p-3 font-mono text-xs text-center bg-[#0d1117] border border-slate-800 rounded text-gray-300"
+              >
                 {status}
               </div>
             )}
@@ -163,7 +179,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="text-gray-400 hover:text-sky-400 font-medium text-sm transition-colors flex items-center gap-2 disabled:opacity-40 outline-none cursor-pointer disabled:cursor-not-allowed"
+                className="text-gray-400 hover:text-sky-400 font-medium text-sm transition-colors flex items-center gap-2 disabled:opacity-40 rounded focus:outline-none focus:ring-2 focus:ring-sky-500/50 cursor-pointer disabled:cursor-not-allowed"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -186,7 +202,7 @@ export default function Contact() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-emerald-400 font-medium text-sm transition-colors flex items-center gap-2 outline-none"
+                className="text-gray-400 hover:text-emerald-400 font-medium text-sm transition-colors flex items-center gap-2 rounded focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
                 title="Instant WhatsApp Redirection"
               >
                 <svg
@@ -196,7 +212,7 @@ export default function Contact() {
                   width="18"
                   height="18"
                 >
-                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.93 0c3.165.001 6.14 1.233 8.377 3.469 2.237 2.236 3.466 5.21 3.466 8.377-.003 6.582-5.338 11.93-11.87 11.93h-.007c-2.018 0-3.99-.513-5.732-1.492L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.725 1.451 5.397 0 9.786-4.385 9.788-9.782.002-2.615-1.012-5.074-2.857-6.922m-10.13 11.12l-.286-.17C4.173 17.65 2.164 16.48 2.164 13.14c.002-4.914 4.004-8.913 8.924-8.913 2.383.001 4.625.93 6.312 2.618 1.688 1.689 2.615 3.932 2.612 6.315-.005 4.914-4.008 8.914-8.924 8.914H11.13c-1.464-.002-2.905-.363-4.186-1.047l-.3-.18zm11.332-3.664c.264.13.424.21.467.28.043.07.043.41-.128.892-.17.482-.996.945-1.41 1.002-.414.057-.828.114-2.33-.483-1.503-.597-2.474-2.128-2.545-2.22-.072-.093-.578-.771-.578-1.472 0-.7.368-1.05.5-1.193.131-.143.286-.18.38-.18.096 0 .193.001.275.005.085.004.2.032.304.28.106.252.362.883.394.948.032.065.053.142.01.227-.042.085-.096.143-.162.221-.066.079-.14.165-.2.23-.066.073-.136.153-.058.287.078.134.348.573.746.927.514.457.948.599 1.084.667.135.068.214.057.264-.001.05-.058.214-.25.27-.374.058-.124.115-.104.194-.075z" />
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.93 0c3.165.001 6.14 1.233 8.377 3.469 2.237 2.236 3.466 5.21 3.466 8.377-.003 6.582-5.338 11.93-11.87 11.93h-.007c-2.018 0-3.99-.513-5.732-1.492L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.725 1.451 5.397 0 9.786-4.385 9.788-9.782.002-2.615-1.012-5.074-2.857-6.922m-10.13 11.12l-.286-.17C4.173 17.65 2.164 16.48 2.164 13.14c.002-4.914 4.004-8.913 8.924-8.913 2.383.001 4.625.93 6.312 2.618 1.688 1.689 2.615 3.932 2.612 6.315-.005 4.914-4.008 8.914-8.924 8.914H11.13c-1.464-.002-2.905-.363-4.186-1.047l-.3-.18zm11.332-3.664c.264.13.424.21.467.28.043.07.043.41-.128.892-.17.482-.996.945-1.41 1.002-.414.057-.828.114-2.33-.483-1.503-.597-2.474-2.128-2.545-2.22-.072-.093-.578-.771-.578-1.472 0-.7.368-1.05.5-1.193.131-.143.286-.18.38-.18.096 0 .193.001.275.005.085.004.2.032.304.28.106.252.362.883.394.948.032.065.053.142.01.227-.042.085-.096.143-.162.221-.066.073-.136.153-.058.287.078.134.348.573.746.927.514.457.948.599 1.084.667.135.068.214.057.264-.001.05-.058.214-.25.27-.374.058-.124.115-.104.194-.075z" />
                 </svg>
                 <span>openWhatsApp()</span>
               </a>
