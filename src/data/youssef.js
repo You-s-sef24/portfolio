@@ -11,7 +11,7 @@ export const youssef = {
     stack: ["React.js", "Next.js", "Tailwind", "Bootstrap"],
     skills: {
         frontend: ["HTML", "CSS", "JavaScript", "Bootstrap", "Tailwind", "React.js", "Next.js"],
-        tools: ["Git", "GitHub", "Postman", "Shadcn"],
+        tools: ["Git", "GitHub", "Postman", "Shadcn","Zod"],
     },
     languages: ["Arabic (Native)", "English (Professional)"],
     links: [
