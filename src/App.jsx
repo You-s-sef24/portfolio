@@ -4,6 +4,7 @@ import HeroSection from "./Components/HeroSection";
 import About from "./Components/About";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
+import WhatsAppMe from "./Components/WhatsAppMe";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <About />
       <Projects />
       <Contact />
+      <WhatsAppMe />
     </>
   );
 }
